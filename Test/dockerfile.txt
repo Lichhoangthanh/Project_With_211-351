@@ -1,0 +1,16 @@
+FROM ubuntu
+
+LABEL author="Lisa Rubanova 211-331"
+
+RUN apt-get update
+RUN apt-get install g++ -y
+
+WORKDIR /Test
+
+COPY *.cpp Hoang211331 /test
+COPY *.h Hoang211331 /test
+COPY *.txt Hoang211331 /test
+
+
+
+ENTRYPOINT  ["./myProgram"]
